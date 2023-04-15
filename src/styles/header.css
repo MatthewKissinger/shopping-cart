@@ -1,0 +1,35 @@
+header {
+    font-family: 'Dongle', sans-serif;
+    font-size: 2rem;
+    background-color: #808584;
+    color: #fff;
+    height: 8rem;
+    padding: 2rem 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-right-list {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding-right: 5rem;
+    list-style: none;
+}
+
+.home-link, .cart-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.home-link:hover, .cart-link:hover {
+    color: blue;
+}
+
+.home-icon, .cart-icon {
+    font-size: 2rem;
+    height: 2.25rem;
+}
