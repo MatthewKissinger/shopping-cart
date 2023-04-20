@@ -10,6 +10,11 @@ header {
     justify-content: space-between;
 }
 
+.text-link {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 .header-right-list {
     display: flex;
     align-items: center;
