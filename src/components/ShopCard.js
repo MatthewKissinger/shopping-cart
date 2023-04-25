@@ -1,7 +1,7 @@
 import "../styles/shopCard.css"
 
 export default function ShopCard(props) {
-    const { name, price, text, id, addToCart } = props;
+    const { name, price, text, id, handleClick } = props;
 
     return (
         <div id={id} className="shop-card">
@@ -14,7 +14,7 @@ export default function ShopCard(props) {
             <div className="card-btns">
                 <button 
                     id={id}
-                    onClick={addToCart}
+                    onClick={handleClick}
                     className="card-add-btn">Add to Cart
                 </button>
             </div>
