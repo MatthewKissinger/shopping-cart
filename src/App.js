@@ -6,8 +6,6 @@ import Home from './components/Home';
 import Products from './components/Products';
 import ShoppingCart from "./components/ShoppingCart";
 
-
-// style the home landing page -- include a button to get to the product page
 // redesign the shopCard items to be on a 3 wide grid, and the flow of the card is in a column structure
 
 export default function App() {
