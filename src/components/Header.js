@@ -1,8 +1,9 @@
 import { Outlet, Link } from "react-router-dom";
 import '../styles/header.css'
 
+export default function Header(props) {
+    const { cartTotal } = props;
 
-export default function Header() {
     return (
         <div>
             <header>
@@ -13,10 +14,12 @@ export default function Header() {
                     <ul className='header-right-list'>
                         <Link className="text-link" to="/">
                             <li className='home-link'>
-                                <span className='material-icons home-icon'>
-                                    home
-                                </span>
                                 <h2>Home</h2>                 
+                            </li>
+                        </Link>
+                        <Link className="text-link" to="/products">
+                            <li className="products-link">
+                                <h2>Products</h2>
                             </li>
                         </Link> 
                         <Link className="text-link" to="/cart">
@@ -24,7 +27,9 @@ export default function Header() {
                                 <span className='material-icons cart-icon'>
                                     shopping_cart
                                 </span>
-                                <h2>Cart</h2>
+                                <div className="cart-total">
+                                    <p>{cartTotal}</p>
+                                </div>                               
                             </li>
                         </Link>   
                     </ul>

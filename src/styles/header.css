@@ -23,18 +23,48 @@ header {
     list-style: none;
 }
 
-.home-link, .cart-link {
+.home-link, .cart-link, .products-link {
     display: flex;
     align-items: center;
     gap: 1rem;
     cursor: pointer;
 }
 
-.home-link:hover, .cart-link:hover {
-    color: blue;
+.home-link:hover, .cart-link:hover, .products-link:hover {
+    color: rgb(82, 252, 153);
 }
 
-.home-icon, .cart-icon {
-    font-size: 2rem;
-    height: 2.25rem;
+.cart-link {
+    position: relative;
+}
+
+.cart-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 50%;
+    background-color: white;
+    color: #808584;
+    height: 3rem;
+    width: 3rem;
+}
+
+.cart-total {
+    position: absolute;
+    display: flex;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: #000000;
+    background-color: rgb(82, 252, 153);
+    height: 1.4rem;
+    width: 1.4rem;
+    top: 2rem;
+    left: 2rem;
+}
+
+.cart-total > p {
+    position: absolute;
+    left: 30%;
+    bottom: -40%;
 }

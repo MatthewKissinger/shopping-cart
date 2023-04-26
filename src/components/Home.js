@@ -1,26 +1,16 @@
 import "../styles/home.css"
-import ShopCard from "./ShopCard";
 
-export default function Home(props) {
-    const { data, addToCart } = props;
-
-    const shopCardList = data.map((item) => {
-
-        return (
-            <ShopCard 
-                key={item.id}
-                {...item}
-                handleClick={addToCart}
-            />
-        )
-    })
+export default function Home() {
+    
 
     return (
         <div className="home-layout">
-            <h1 className="home-banner">Banner Message here</h1>
-            <div className="shopCard-grid">
-                {shopCardList}
-            </div>   
+            <div className="home-left-container">
+                Left content
+            </div>
+            <div className="home-right-container">
+                Right content
+            </div>
         </div>
     )
 }
