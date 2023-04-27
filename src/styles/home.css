@@ -4,7 +4,7 @@
     margin-top: 5rem;
     padding: 5rem 25rem;
     justify-content: space-between;
-    height: 80vh;
+    height: 75vh;
 }
 
 .home-left-container {
@@ -12,7 +12,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 60%;
-    max-width: 30%;
+    max-width: 40%;
 }
 
 .home-left-container > h1 {

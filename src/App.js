@@ -6,7 +6,8 @@ import Home from './components/Home';
 import Products from './components/Products';
 import ShoppingCart from "./components/ShoppingCart";
 
-// Get images for the shopCard.js items and place in the data.js file. Have the images displayed from there
+// create a footer
+// add github link
 
 export default function App() {
     // State

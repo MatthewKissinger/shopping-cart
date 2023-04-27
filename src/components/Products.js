@@ -1,4 +1,5 @@
 import "../styles/products.css"
+import Footer from "./Footer";
 import ShopCard from "./ShopCard";
 
 export default function Products(props) {
@@ -16,10 +17,14 @@ export default function Products(props) {
     })
 
     return (
-        <div className="product-layout">
-            <div className="shopCard-grid">
-                {shopCardList}
-            </div>   
+        <div>
+            <div className="product-layout">
+                <div className="shopCard-grid">
+                    {shopCardList}
+                </div>   
+            </div>
+            <Footer />
         </div>
+        
     )
 }

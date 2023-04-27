@@ -1,8 +1,11 @@
+import Footer from "./Footer"
+
 
 export default function ShoppingCart() {
     return (
         <div>
-            Cart Here
+            <div className="cart-container">Cart Here</div>
+            <Footer />
         </div>
     )
 }
