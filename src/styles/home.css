@@ -1,5 +1,5 @@
 .home-layout {
-    font-family: 'Dongle', sans-serif;
+    font-family: 'Poppins', sans-serif;
     display: flex;
     margin-top: 5rem;
     padding: 5rem 25rem;
@@ -16,22 +16,28 @@
 }
 
 .home-left-container > h1 {
-    font-size: 4.5rem;
-    line-height: 4rem;
+    font-size: 3rem;
+    line-height: 4.5rem;
+    letter-spacing: 2px;
 }
 
 .shop-btn {
-    font-family: 'Dongle', sans-serif;
+    font-family: 'Poppins', sans-serif;
     height: 5rem;
     width: 75%;
     border: none;
-    border-radius: 2rem;
-    font-size: 4rem;
+    border-radius: 16px;
+    font-size: 2.75rem;
     color: white;
     font-weight: 700;
     background-color: rgb(82, 252, 153);
     letter-spacing: 1px;
     cursor: pointer;
+}
+
+.shop-btn:hover {
+    color: rgb(82, 252, 153);
+    background-color: rgb(92, 91, 91);
 }
 
 .home-right-container {

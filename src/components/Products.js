@@ -17,7 +17,6 @@ export default function Products(props) {
 
     return (
         <div className="product-layout">
-            <h1 className="home-banner">Banner Message here</h1>
             <div className="shopCard-grid">
                 {shopCardList}
             </div>   

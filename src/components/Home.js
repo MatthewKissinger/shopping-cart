@@ -7,7 +7,7 @@ export default function Home() {
     return (
         <div className="home-layout">
             <div className="home-left-container">
-                <h1>Fresh Coffee Beans shipped straight to your door</h1>
+                <h1>Fresh coffee beans shipped straight to your door</h1>
                 <Link to="/products">
                     <button className="shop-btn">Shop Now</button>
                 </Link>    

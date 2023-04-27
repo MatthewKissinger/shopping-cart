@@ -1,7 +1,12 @@
 .shop-card {
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid green;
+    border-radius: 12px;
     display: flex;
-    width: 70%;
-    height: 14rem;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+    overflow: hidden;
 }
 
 .img-container {
@@ -10,29 +15,44 @@
     align-items: center;
     justify-content: center;
     font-size: 4rem;
-    width: 30%;
+    width: 100%;
+    height: 55%;
 }
 
 .card-info {
-    padding: 2rem;
-    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 2rem;
+    height: 30%;
+}
+
+.card-name {
+    font-size: 2rem;
+    height: 3.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
 }
 
 .card-btns {
-    width: 15%;
+    width: 100%;
+    height: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .card-add-btn {
+    margin: 1rem;
     width: 100%;
     height: 3rem;
     border: none;
     color: white;
     background-color: rgb(63, 63, 218);
-    border-radius: 5px;
-    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
     letter-spacing: 1px;
     font-weight: bold;
     cursor: pointer;

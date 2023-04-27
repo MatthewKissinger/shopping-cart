@@ -6,7 +6,7 @@ import Home from './components/Home';
 import Products from './components/Products';
 import ShoppingCart from "./components/ShoppingCart";
 
-// redesign the shopCard items to be on a 3 wide grid, and the flow of the card is in a column structure
+// Get images for the shopCard.js items and place in the data.js file. Have the images displayed from there
 
 export default function App() {
     // State

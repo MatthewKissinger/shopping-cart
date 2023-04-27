@@ -10,7 +10,7 @@ const shopItemsData = [
         id: "2",
         name: "Robusta",
         price: 10,
-        text: "1 pound of our tradmark Robusta beans - whole",
+        text: "1 pound of our trademark Robusta beans - whole",
         quantity: 0
     },
     {
@@ -31,14 +31,14 @@ const shopItemsData = [
         id: "5",
         name: "Matt's French Press",
         price: 25,
-        text: "1 pound of our tradmark Robusta beans - whole",
+        text: "stainless steel premium coffee maker",
         quantity: 0
     },
     {
         id: "6",
         name: "Matt's Aero Press",
         price: 15,
-        text: "1 pound of our tradmark Robusta beans - whole",
+        text: "for when you only need 1 cup of joe",
         quantity: 0
     },
 ]

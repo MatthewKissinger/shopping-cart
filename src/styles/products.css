@@ -1,11 +1,12 @@
 .product-layout {
-    border: 1px solid green;
-    padding: 4rem;
+    margin: 4rem 0;
 }
 
+
 .shopCard-grid {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 4rem;
+    width: 65%;
+    margin: 0 auto;
 }
