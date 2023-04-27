@@ -6,8 +6,11 @@ import Home from './components/Home';
 import Products from './components/Products';
 import ShoppingCart from "./components/ShoppingCart";
 
-// create a footer
-// add github link
+// setup the cart page
+// it should render each item in the cart 
+// the user will have the ability to increase or decrease the number of each item that is in the cart
+// the cost for each item should be displayed
+// the cart total in dollars should be displayed as well
 
 export default function App() {
     // State
@@ -25,13 +28,19 @@ export default function App() {
         const inCart = cartArray.find(item => item.id === result.id)
 
         if (inCart === undefined) {
-            console.log('not in the cart, please add the first instance')
             setCartArray([
                 ...cartArray, 
                 result
             ])
         } else {
-            console.log('update the quantity');
+            const newCart = cartArray.map((item) => {
+                if(item.id === inCart.id) {
+                    return {...item, quantity: item.quantity + 1}
+                }
+                return item;
+            })
+
+            setCartArray(newCart);
         }
     }
 
