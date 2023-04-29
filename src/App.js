@@ -63,7 +63,9 @@ export default function App() {
                         />}    
                     />
                     <Route path='cart' 
-                        element={<ShoppingCart />} 
+                        element={<ShoppingCart 
+                            cartArray={cartArray}
+                        />} 
                     />
                 </Route>
             </Routes>
