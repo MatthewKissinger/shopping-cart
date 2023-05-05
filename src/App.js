@@ -7,6 +7,8 @@ import Products from './components/Products';
 import ShoppingCart from "./components/ShoppingCart";
 
 // setup the cart page
+// 1) empty cart render
+// 2) items in cart render
 // it should render each item in the cart 
 // the user will have the ability to increase or decrease the number of each item that is in the cart
 // the cost for each item should be displayed

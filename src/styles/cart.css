@@ -1,0 +1,30 @@
+
+.cart-layout {
+    padding: 2rem;
+    margin: 0 auto;
+    width: 60%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+}
+
+.cart-empty-p {
+    font-size: 2rem;
+}
+
+.shop-btn {
+    font-family: 'Poppins', sans-serif;
+    height: 6rem;
+    width: 20rem;
+    border: none;
+    border-radius: 16px;
+    font-size: 2.75rem;
+    color: white;
+    font-weight: 700;
+    background-color: rgb(82, 252, 153);
+    letter-spacing: 1px;
+    cursor: pointer;
+}

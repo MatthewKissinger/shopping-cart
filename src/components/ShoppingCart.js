@@ -1,5 +1,7 @@
+import "../styles/cart.css"
 import Footer from "./Footer"
 import CartCard from "./CartCard";
+import { Link } from "react-router-dom"
 
 
 export default function ShoppingCart(props) {
@@ -12,17 +14,21 @@ export default function ShoppingCart(props) {
     const cartCardList = '';
 
     return (
-        <div>
-            <div className="cart-layout">
-                {cartArray.length === 0 ? 
-                    <div>Your cart is empty</div> 
-                    :  
+        <div className="cart-page">
+            {cartArray.length === 0 ? 
+                <div className="cart-layout">
+                    <p className="cart-empty-p">Your cart is empty &#128542;</p> 
+                    <Link to="/products">
+                        <button className="shop-btn">Shop Now</button>
+                    </Link> 
+                </div>
+                : 
+                <div className="cart-layout"> 
                     <div className="cartCard-grid">
                         Your cart has items
                     </div>  
-                }
-                
-            </div>
+                </div>
+            }
             <Footer />
         </div>
     )
