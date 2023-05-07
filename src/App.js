@@ -19,7 +19,7 @@ export default function App() {
     const [ cartArray, setCartArray ] = useState([
         {
             id: "1",
-            name: "Arabica",
+            name: "Arabica (lb)",
             price: 8,
             description: "1 pound of fresh Arabica beans - whole",
             image: "coffee-1",
@@ -27,7 +27,7 @@ export default function App() {
         },
         {
             id: "2",
-            name: "Robusta",
+            name: "Robusta (lb)",
             price: 10,
             description: "1 pound of our trademark Robusta beans - whole",
             image: "coffee-2",

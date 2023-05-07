@@ -1,7 +1,7 @@
 const shopItemsData = [
     {
         id: "1",
-        name: "Arabica",
+        name: "Arabica (lb)",
         price: 8,
         description: "1 pound of fresh Arabica beans - whole",
         image: "coffee-1",
@@ -9,7 +9,7 @@ const shopItemsData = [
     },
     {
         id: "2",
-        name: "Robusta",
+        name: "Robusta (lb)",
         price: 10,
         description: "1 pound of our trademark Robusta beans - whole",
         image: "coffee-2",
@@ -17,7 +17,7 @@ const shopItemsData = [
     },
     {
         id: "3",
-        name: "Excelsa",
+        name: "Excelsa (lb)",
         price: 12,
         description: "1 pound of our Excelsa beans - whole",
         image: "coffee-3",
@@ -25,7 +25,7 @@ const shopItemsData = [
     },
     {
         id: "4",
-        name: "Liberica",
+        name: "Liberica (lb)",
         price: 15,
         description: "1 pound of our Liberica beans - whole",
         image: "coffee-4",
@@ -33,7 +33,7 @@ const shopItemsData = [
     },
     {
         id: "5",
-        name: "Matt's French Press",
+        name: "Matt's French Press (ea)",
         price: 25,
         description: "stainless steel premium coffee maker",
         image: "french-press",
@@ -41,7 +41,7 @@ const shopItemsData = [
     },
     {
         id: "6",
-        name: "Matt's Aero Press",
+        name: "Matt's Aero Press (ea)",
         price: 15,
         description: "for when you only need 1 cup of joe",
         image: "aero-press",

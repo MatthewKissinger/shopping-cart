@@ -1,6 +1,5 @@
 
 .cart-layout {
-    padding: 2rem;
     margin: 0 auto;
     width: 60%;
     min-height: 80vh;
@@ -8,8 +7,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 6rem;
-    border: 1px solid red;
+    gap: 1.5rem;
 }
 
 .cart-empty-p {
@@ -31,8 +29,53 @@
 }
 
 .cartCard-grid {
-    width: 80%;
+    width: 800px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 2rem;
+}
+
+.cart-options-container {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.5rem;
+}
+
+.cart-options-container > button {
+    height: 5rem;
+    width: 70%;
+    font-size: 2rem;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-checkout-btn {
+    background-color: rgb(47, 143, 47);
+}
+
+.cart-products-btn {
+    background-color: rgb(52, 52, 52);
+}
+
+.cart-clear-btn {
+    background-color: rgb(165, 18, 18);
+}
+
+.cart-grand-total {
+    font-size: 3rem;
+    width: 800px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.cart-grand-total > p {
+    width: 70%;
+    text-align: center;
 }

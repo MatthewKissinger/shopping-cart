@@ -36,6 +36,14 @@ export default function ShoppingCart(props) {
                 <div className="cart-layout"> 
                     <div className="cartCard-grid">
                         {cartCardList}
+                    </div>
+                    <div className="cart-grand-total">
+                        <p>{`Total: $26`}</p>
+                    </div>
+                    <div className="cart-options-container">
+                        <button className="cart-checkout-btn">Check Out</button>
+                        <button className="cart-products-btn">Back to Shop</button>
+                        <button className="cart-clear-btn">Clear Cart</button>
                     </div>  
                 </div>
             }
