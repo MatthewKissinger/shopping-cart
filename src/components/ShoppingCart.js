@@ -3,8 +3,6 @@ import Footer from "./Footer"
 import CartCard from "./CartCard";
 import { Link } from "react-router-dom"
 
-// layout and design for when the cart has items
-// place a few items in the cart state for design mocking
 
 export default function ShoppingCart(props) {
 

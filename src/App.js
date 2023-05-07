@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { shopItemsData } from "./data";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
@@ -6,34 +6,31 @@ import Home from './components/Home';
 import Products from './components/Products';
 import ShoppingCart from "./components/ShoppingCart";
 
-// setup the cart page
-// 1) empty cart render -- DONE X
-// 2) items in cart render
-// it should render each item in the cart 
-// the user will have the ability to increase or decrease the number of each item that is in the cart
-// the cost for each item should be displayed
-// the cart total in dollars should be displayed as well
 
 export default function App() {
     // State
-    const [ cartArray, setCartArray ] = useState([
-        {
-            id: "1",
-            name: "Arabica (lb)",
-            price: 8,
-            description: "1 pound of fresh Arabica beans - whole",
-            image: "coffee-1",
-            quantity: 2
-        },
-        {
-            id: "2",
-            name: "Robusta (lb)",
-            price: 10,
-            description: "1 pound of our trademark Robusta beans - whole",
-            image: "coffee-2",
-            quantity: 1
-        }
-    ]);
+    const [ cartArray, setCartArray ] = useState([]);
+    const [ cartItemTotal, setCartItemTotal ] = useState([0]);
+    const [ cartPriceTotal, setCartPriceTotal ] = useState([0]);
+
+
+    // create a useEffect function that tracks the total cart items everytime the cartArray is updated
+
+    useEffect(() => {
+
+        const itemTotal = cartArray.reduce((acc, object) => {
+            return acc + object.quantity;
+        }, 0);
+
+        setCartItemTotal(itemTotal);
+
+    }, [cartArray]);
+
+    // create a useEffect function that tracks the grand total of the cart everytime the cartArray is updated
+
+    useEffect(() => {
+
+    }, [cartArray]);
 
     // Methods
     function addToCart(e) {
@@ -73,7 +70,7 @@ export default function App() {
             <Routes>
                 <Route path="/" element={
                     <Header 
-                        cartTotal={cartArray.length}
+                        cartTotal={cartItemTotal}
                     />}>
                     <Route index 
                         element={<Home />}
