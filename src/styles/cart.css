@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: center;
     gap: 6rem;
+    border: 1px solid red;
 }
 
 .cart-empty-p {
@@ -27,4 +28,11 @@
     background-color: rgb(82, 252, 153);
     letter-spacing: 1px;
     cursor: pointer;
+}
+
+.cartCard-grid {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }

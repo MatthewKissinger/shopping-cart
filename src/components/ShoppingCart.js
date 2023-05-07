@@ -3,15 +3,25 @@ import Footer from "./Footer"
 import CartCard from "./CartCard";
 import { Link } from "react-router-dom"
 
+// layout and design for when the cart has items
+// place a few items in the cart state for design mocking
 
 export default function ShoppingCart(props) {
 
     const { cartArray } = props;
 
-    // conditionally render whether the cartArray is empty or contains some items
-
     // variable that will map the cartArray to render each CartCard component that is qeued for purchase
-    const cartCardList = '';
+    const cartCardList = cartArray.map((item) => {
+
+        return(
+            <CartCard
+                key={item.id}
+                {...item}
+            />
+        )
+    })
+
+    console.log(cartArray);
 
     return (
         <div className="cart-page">
@@ -25,7 +35,7 @@ export default function ShoppingCart(props) {
                 : 
                 <div className="cart-layout"> 
                     <div className="cartCard-grid">
-                        Your cart has items
+                        {cartCardList}
                     </div>  
                 </div>
             }

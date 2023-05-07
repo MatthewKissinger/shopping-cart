@@ -1,0 +1,11 @@
+.cart-card {
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+}

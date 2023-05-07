@@ -7,7 +7,7 @@ import Products from './components/Products';
 import ShoppingCart from "./components/ShoppingCart";
 
 // setup the cart page
-// 1) empty cart render
+// 1) empty cart render -- DONE X
 // 2) items in cart render
 // it should render each item in the cart 
 // the user will have the ability to increase or decrease the number of each item that is in the cart
@@ -16,10 +16,26 @@ import ShoppingCart from "./components/ShoppingCart";
 
 export default function App() {
     // State
-    const [ cartArray, setCartArray ] = useState([]);
+    const [ cartArray, setCartArray ] = useState([
+        {
+            id: "1",
+            name: "Arabica",
+            price: 8,
+            description: "1 pound of fresh Arabica beans - whole",
+            image: "coffee-1",
+            quantity: 2
+        },
+        {
+            id: "2",
+            name: "Robusta",
+            price: 10,
+            description: "1 pound of our trademark Robusta beans - whole",
+            image: "coffee-2",
+            quantity: 1
+        }
+    ]);
 
     // Methods
-
     function addToCart(e) {
         const cardId = e.target.id;
 
@@ -34,6 +50,8 @@ export default function App() {
                 ...cartArray, 
                 result
             ])
+
+            console.log(cartArray)
         } else {
             const newCart = cartArray.map((item) => {
                 if(item.id === inCart.id) {
@@ -47,6 +65,8 @@ export default function App() {
     }
 
     // create a method that adds up the total quantities in the cart array and outputs a number, that number will be passed to the cartTotal prop in the header
+    
+
 
     return (
         <BrowserRouter>
