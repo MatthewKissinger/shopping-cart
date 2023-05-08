@@ -6,6 +6,17 @@ import Home from './components/Home';
 import Products from './components/Products';
 import ShoppingCart from "./components/ShoppingCart";
 
+// create functions for decrementing and incrementing the item quantity for each cartArray object that is qeued up for purchase in the cart
+// these functions will be attached to the minus and plus buttons on the cartCard.js
+
+// when calling the subtract(decrement function) and the quantity is at zero prompt the user if they want to remove the item from the cart, if yes, remove the item from the cartArray state
+// filter could work to remove an object from the cart array
+
+// create a function for checking out the cart
+
+// create a function for clearing the cart
+
+// link the back to shop button on the cart page to go to the products page
 
 export default function App() {
     // State
@@ -14,7 +25,7 @@ export default function App() {
     const [ cartPriceTotal, setCartPriceTotal ] = useState([0]);
 
 
-    // create a useEffect function that tracks the total cart items everytime the cartArray is updated
+    //useEffect function that tracks the total cart items everytime the cartArray is updated
 
     useEffect(() => {
 
@@ -26,9 +37,15 @@ export default function App() {
 
     }, [cartArray]);
 
-    // create a useEffect function that tracks the grand total of the cart everytime the cartArray is updated
+    //useEffect function that tracks the grand total of the cart everytime the cartArray is updated
 
     useEffect(() => {
+
+        const cartGrandTotal = cartArray.reduce((acc, object) => {
+            return acc + (object.quantity * object.price); 
+        }, 0);
+
+        setCartPriceTotal(cartGrandTotal);
 
     }, [cartArray]);
 
@@ -48,7 +65,6 @@ export default function App() {
                 result
             ])
 
-            console.log(cartArray)
         } else {
             const newCart = cartArray.map((item) => {
                 if(item.id === inCart.id) {
@@ -61,9 +77,25 @@ export default function App() {
         }
     }
 
-    // create a method that adds up the total quantities in the cart array and outputs a number, that number will be passed to the cartTotal prop in the header
-    
+    // used to increate an item's quantity while on the cart page and clicking the '+' button
+    function increaseCartItem(e) {
 
+        const itemId = e.target.id;
+
+        const newCart = cartArray.map((item) => {
+            if (item.id === itemId) {
+                return {...item, quantity: item.quantity + 1}
+            }
+            return item;
+        })
+
+        setCartArray(newCart);
+        
+    }
+
+    function decreaseCartItem() {
+        console.log('lower the amount of this item in the cart');
+    }
 
     return (
         <BrowserRouter>
@@ -84,6 +116,9 @@ export default function App() {
                     <Route path='cart' 
                         element={<ShoppingCart 
                             cartArray={cartArray}
+                            cartPriceTotal={cartPriceTotal}
+                            increaseCartItem={increaseCartItem}
+                            decreaseCartItem={decreaseCartItem}
                         />} 
                     />
                 </Route>

@@ -2,7 +2,7 @@ import React from 'react';
 import "../styles/cartCard.css";
 
 export default function CartCard(props) {
-    const { name, price, image, id, quantity, description } = props;
+    const { name, price, image, id, quantity, description, increaseCartItem, decreaseCartItem } = props;
 
     return (
         <div id={id} className='cart-card'>
@@ -15,9 +15,15 @@ export default function CartCard(props) {
                     <p className='cart-card-price'>{`$${price * quantity}`}</p>
                 </div>
                 <div className='update-cart-card-quantity'>
-                    <button className='cart-card-decrement'>-</button>
+                    <button className='cart-card-decrement'
+                            id={id}
+                            onClick={decreaseCartItem}
+                    >-</button>
                     <p className='cart-card-quantity'>{quantity}</p>
-                    <button className='cart-card-increment'>+</button>
+                    <button className='cart-card-increment'
+                            id={id}
+                            onClick={increaseCartItem}
+                    >+</button>
                 </div>
             </div>
             

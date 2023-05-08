@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 
 export default function ShoppingCart(props) {
 
-    const { cartArray } = props;
+    const { cartArray, cartPriceTotal, increaseCartItem, decreaseCartItem } = props;
 
     // variable that will map the cartArray to render each CartCard component that is qeued for purchase
     const cartCardList = cartArray.map((item) => {
@@ -15,11 +15,11 @@ export default function ShoppingCart(props) {
             <CartCard
                 key={item.id}
                 {...item}
+                increaseCartItem={increaseCartItem}
+                decreaseCartItem={decreaseCartItem}
             />
         )
     })
-
-    console.log(cartArray);
 
     return (
         <div className="cart-page">
@@ -36,7 +36,7 @@ export default function ShoppingCart(props) {
                         {cartCardList}
                     </div>
                     <div className="cart-grand-total">
-                        <p>{`Total: $26`}</p>
+                        <p>{`Total: $${cartPriceTotal}`}</p>
                     </div>
                     <div className="cart-options-container">
                         <button className="cart-checkout-btn">Check Out</button>
