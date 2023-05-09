@@ -6,9 +6,6 @@ import Home from './components/Home';
 import Products from './components/Products';
 import ShoppingCart from "./components/ShoppingCart";
 
-// create functions for decrementing and incrementing the item quantity for each cartArray object that is qeued up for purchase in the cart
-// these functions will be attached to the minus and plus buttons on the cartCard.js
-
 // when calling the subtract(decrement function) and the quantity is at zero prompt the user if they want to remove the item from the cart, if yes, remove the item from the cartArray state
 // filter could work to remove an object from the cart array
 
@@ -77,7 +74,7 @@ export default function App() {
         }
     }
 
-    // used to increate an item's quantity while on the cart page and clicking the '+' button
+    // Methods for the CartCard.js buttons
     function increaseCartItem(e) {
 
         const itemId = e.target.id;
@@ -93,8 +90,35 @@ export default function App() {
         
     }
 
-    function decreaseCartItem() {
-        console.log('lower the amount of this item in the cart');
+    function decreaseCartItem(e) {
+
+        const itemId = e.target.id;
+
+        const result = cartArray.find((item) => item.id === itemId);
+
+        if (result.quantity === 1) {
+            const response = window.confirm("Do you want to remove this item from the cart?");
+
+            if (response === false) {
+                return;
+            } else {
+                // filter out the result item from the array
+                const newCart = cartArray.filter((item) => {
+                    if (item.id !== itemId) {
+                        return item;
+                    }
+                })
+                setCartArray(newCart);
+            }
+        } else {
+            const newCart = cartArray.map((item) => {
+                if (item.id === itemId) {
+                    return {...item, quantity: item.quantity - 1}
+                }
+                return item;
+            })
+            setCartArray(newCart); 
+        }
     }
 
     return (

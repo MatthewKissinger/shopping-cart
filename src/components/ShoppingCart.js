@@ -40,7 +40,9 @@ export default function ShoppingCart(props) {
                     </div>
                     <div className="cart-options-container">
                         <button className="cart-checkout-btn">Check Out</button>
-                        <button className="cart-products-btn">Back to Shop</button>
+                        <Link to="/products">
+                            <button className="cart-products-btn">Back to Shop</button>
+                        </Link>
                         <button className="cart-clear-btn">Clear Cart</button>
                     </div>  
                 </div>

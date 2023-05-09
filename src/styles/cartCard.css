@@ -66,3 +66,7 @@
     background-color: rgb(63, 63, 218);
     color: white;
 }
+
+.update-cart-card-quantity > button:hover {
+    background-color: rgb(99, 99, 229);
+}

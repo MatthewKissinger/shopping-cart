@@ -45,7 +45,7 @@
     gap: 1.5rem;
 }
 
-.cart-options-container > button {
+.cart-options-container > button, .cart-products-btn {
     height: 5rem;
     width: 70%;
     font-size: 2rem;
@@ -59,12 +59,25 @@
     background-color: rgb(47, 143, 47);
 }
 
+.cart-checkout-btn:hover {
+    background-color: rgb(85, 198, 85);
+}
+
 .cart-products-btn {
     background-color: rgb(52, 52, 52);
+    width: 560px;
+}
+
+.cart-products-btn:hover {
+    background-color: rgb(116, 116, 116);
 }
 
 .cart-clear-btn {
     background-color: rgb(165, 18, 18);
+}
+
+.cart-clear-btn:hover {
+    background-color: rgb(221, 63, 63);
 }
 
 .cart-grand-total {
