@@ -6,14 +6,7 @@ import Home from './components/Home';
 import Products from './components/Products';
 import ShoppingCart from "./components/ShoppingCart";
 
-// when calling the subtract(decrement function) and the quantity is at zero prompt the user if they want to remove the item from the cart, if yes, remove the item from the cartArray state
-// filter could work to remove an object from the cart array
-
-// create a function for checking out the cart
-
-// create a function for clearing the cart
-
-// link the back to shop button on the cart page to go to the products page
+// publish to gitHub pages
 
 export default function App() {
     // State
@@ -121,6 +114,20 @@ export default function App() {
         }
     }
 
+    function cartCheckout() {
+        alert("Cart Checkout feature not complete");
+    }
+
+    function cartClear() {
+        const response = window.confirm("Are you sure you want to empty your shoppping cart?");
+
+        if (response === false) {
+            return;
+        } else {
+            setCartArray([]);
+        }
+    }
+
     return (
         <BrowserRouter>
             <Routes>
@@ -143,6 +150,8 @@ export default function App() {
                             cartPriceTotal={cartPriceTotal}
                             increaseCartItem={increaseCartItem}
                             decreaseCartItem={decreaseCartItem}
+                            cartCheckout={cartCheckout}
+                            cartClear={cartClear}
                         />} 
                     />
                 </Route>
