@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.c7c32b9a.css",
-    "main.js": "/static/js/main.1b9b81c2.js",
-    "static/media/coffee-shop.jpg": "/static/media/coffee-shop.6b4c4a01587a3f6fb233.jpg",
-    "static/media/coffee-2.jpg": "/static/media/coffee-2.adb96d8721b37093b7c0.jpg",
-    "static/media/aero-press.jpg": "/static/media/aero-press.c190989fb3286ecb65f6.jpg",
-    "static/media/coffee-1.jpg": "/static/media/coffee-1.7698d735629419ce7fe8.jpg",
-    "static/media/coffee-4.jpg": "/static/media/coffee-4.918959f1ae4d0c953c46.jpg",
-    "static/media/coffee-3.jpg": "/static/media/coffee-3.a1a12480e88eb8c2308d.jpg",
-    "static/media/french-press.jpg": "/static/media/french-press.7e435641b600b6649e01.jpg",
-    "index.html": "/index.html",
-    "main.c7c32b9a.css.map": "/static/css/main.c7c32b9a.css.map",
-    "main.1b9b81c2.js.map": "/static/js/main.1b9b81c2.js.map"
+    "main.css": "/shopping-cart/static/css/main.c7c32b9a.css",
+    "main.js": "/shopping-cart/static/js/main.bee617f0.js",
+    "static/media/coffee-shop.jpg": "/shopping-cart/static/media/coffee-shop.6b4c4a01587a3f6fb233.jpg",
+    "static/media/coffee-2.jpg": "/shopping-cart/static/media/coffee-2.adb96d8721b37093b7c0.jpg",
+    "static/media/aero-press.jpg": "/shopping-cart/static/media/aero-press.c190989fb3286ecb65f6.jpg",
+    "static/media/coffee-1.jpg": "/shopping-cart/static/media/coffee-1.7698d735629419ce7fe8.jpg",
+    "static/media/coffee-4.jpg": "/shopping-cart/static/media/coffee-4.918959f1ae4d0c953c46.jpg",
+    "static/media/coffee-3.jpg": "/shopping-cart/static/media/coffee-3.a1a12480e88eb8c2308d.jpg",
+    "static/media/french-press.jpg": "/shopping-cart/static/media/french-press.7e435641b600b6649e01.jpg",
+    "index.html": "/shopping-cart/index.html",
+    "main.c7c32b9a.css.map": "/shopping-cart/static/css/main.c7c32b9a.css.map",
+    "main.bee617f0.js.map": "/shopping-cart/static/js/main.bee617f0.js.map"
   },
   "entrypoints": [
     "static/css/main.c7c32b9a.css",
-    "static/js/main.1b9b81c2.js"
+    "static/js/main.bee617f0.js"
   ]
 }
